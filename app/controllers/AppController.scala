@@ -79,7 +79,7 @@ class AppController @Inject()(graphQL: GraphQL,
     case Success(queryAst: Document) => Executor.execute(
       schema = graphQL.Schema,
       queryAst = queryAst,
-      variables = variables.getOrElse(Json.obj()),
+      variables = variables.getOrElse(Json.obj())
     ).map(Ok(_))
       .recover {
         case error: QueryAnalysisError => BadRequest(error.resolveError)

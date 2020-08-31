@@ -1,14 +1,14 @@
 import sbt.Artifact
 
 name := "graphql_api_example"
- 
-version := "1.0" 
-      
+
+version := "1.0"
+
 lazy val `graphql_api_example` = (project in file(".")).enablePlugins(PlayScala)
 
 resolvers += "Atlassian Maven Repository" at "https://maven.atlassian.com/content/repositories/atlassian-public/"
-      
-scalaVersion := "2.12.8"
+
+scalaVersion := "2.12.6"
 
 libraryDependencies ++= Seq(
   evolutions,
@@ -26,6 +26,3 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.1" % Test,
   "io.spray" %% "spray-json" % "1.3.5"
 )
-
-
-      
